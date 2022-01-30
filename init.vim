@@ -26,7 +26,7 @@ Plug 'ciaranm/detectindent'
 
 
 " Telescope
-"Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
@@ -163,7 +163,7 @@ set incsearch
 " Switch between the last two files
 nnoremap <leader><leader> <C-^>
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
