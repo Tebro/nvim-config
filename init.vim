@@ -4,6 +4,12 @@
 
 set encoding=utf8
 
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Plugins ---- {{{
 call plug#begin()
 
@@ -48,7 +54,9 @@ call plug#end()
 
 
 " Windows --------------- {{{
-set shell=powershell.exe
+if has("win32")
+	set shell=powershell.exe
+endif
 " }}}
 
 " Basic --------------- {{{
