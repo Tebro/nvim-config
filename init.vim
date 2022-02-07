@@ -32,6 +32,7 @@ Plug 'ciaranm/detectindent'
 
 
 " Telescope
+" Requires ripgrep for greping
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
