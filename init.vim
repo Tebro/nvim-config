@@ -207,4 +207,6 @@ set updatetime=100
 set completeopt=menu,menuone,noselect
 lua require('lsp')
 
+" Format on save for .go files
+autocmd BufWrite *.go lua vim.lsp.buf.formatting()
 " }}}
