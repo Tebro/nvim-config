@@ -208,5 +208,9 @@ set completeopt=menu,menuone,noselect
 lua require('lsp')
 
 " Format on save for .go files
-autocmd BufWrite *.go lua vim.lsp.buf.formatting()
+augroup vimrc
+  autocmd!      " Remove all vimrc autocommands
+	autocmd BufWrite *.go lua vim.lsp.buf.formatting()
+augroup END
+
 " }}}
